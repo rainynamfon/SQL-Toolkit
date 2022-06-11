@@ -1,0 +1,5 @@
+SQL Server,有目录视图(曰系统视图)曰sys.sql_logins。 君可系统视图行,当询反 SQL Server 所创登录名及诸登录名息。
+若检 SQL Server 中所有登录名,可行以下 SQL 语句。
+
+SELECT *
+FROM master.sys.sql_logins;
