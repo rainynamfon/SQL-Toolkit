@@ -1,0 +1,6 @@
+/*In SQL Server, there is a catalog view (ie: system view) called sys.sql_logins. You can run a query against this system view 
+that returns all of the Logins that have been created in SQL Server as well as information about these Logins.
+To retrieve all Logins in SQL Server, you can execute the following SQL statement:*/
+
+SELECT *
+FROM master.sys.sql_logins;
