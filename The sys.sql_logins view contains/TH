@@ -1,0 +1,60 @@
+name
+-- นี่คือlogin_nameที่กําหนดไว้ในคําสั่ง CREATE LOGIN
+
+principal_id
+--ค่าตัวเลข
+
+sid
+--นี่คือ SID ที่กําหนดในคําสั่ง CREATE LOGIN
+
+type
+--ประเภทของเงินต้น
+S = ผู้ใช้ SQL Server
+U = ผู้ใช้วินโดวส์
+G = กลุ่มวินโดวส์
+A = บทบาทการสมัคร
+R = บทบาทฐานข้อมูล
+C = ใบรับรองที่แมป
+K = คีย์อสมมาตรที่แมป
+
+type_desc	
+--คําอธิบายสําหรับประเภทของเงินต้น
+ผู้ใช้ SQL Server
+ผู้ใช้วินโดวส์
+กลุ่มวินโดวส์
+บทบาทการสมัคร
+บทบาทฐานข้อมูล
+ใบรับรองที่แมป
+คีย์อสมมาตรที่แมป
+
+is_disabled	
+--0 หรือ 1
+
+create_date
+--วันที่/เวลาที่สร้างเพจเข้าสู่ระบบโดยใช้คําสั่ง CREATE LOGIN
+
+modify_date
+--วันที่/เวลาที่แก้ไขการเข้าสู่ระบบครั้งล่าสุดโดยใช้คําสั่ง ALTER LOGIN
+
+default_database_name
+--นี่คือฐานข้อมูลเริ่มต้นที่กําหนดในคําสั่ง CREATE LOGIN หรือคําสั่ง ALTER LOGIN
+
+default_language_name	
+--นี่เป็นภาษาเริ่มต้นที่กําหนดไว้ในคําสั่ง CREATE LOGIN หรือคําสั่ง ALTER LOGIN
+
+credential_id
+--นี่คือข้อมูลประจําตัวที่กําหนดในคําสั่ง CREATE LOGIN หรือคําสั่ง ALTER LOGIN
+
+is_policy_checked	
+--0 หรือ 1 ซึ่งกําหนดโดยคําสั่ง CREATE LOGIN หรือคําสั่ง ALTER LOGIN
+
+is_expiration_checked	
+--0 หรือ 1 ซึ่งกําหนดโดยคําสั่ง CREATE LOGIN หรือคําสั่ง ALTER LOGIN
+
+password_hash	
+--ค่าที่แฮชของรหัสผ่าน
+
+
+
+
+
