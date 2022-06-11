@@ -1,0 +1,68 @@
+name
+--此 CREATE LOGIN 语之login_name也
+
+principal_id	
+--其数也
+
+sid
+--此 CREATE LOGIN 语之 sid也
+
+type 
+--委托人之类也
+S = SQL Server user
+U = 视窗用户
+G = 窗口组
+A = 应用程序角色
+R = 数据库角色
+C = 证书映射
+K = 映者非对称密钥
+
+type_desc
+--主体者,言也
+SQL Server user
+视窗用户
+窗口组
+应用程序角色
+数据库角色
+证书映射
+映者非对称密钥
+
+is_disabled
+--0 或 1
+
+create_date	
+--用 CREATE LOGIN 语创录日/时
+
+modify_date	
+--前用 ALTER LOGIN 语改登录名日/时
+
+default_database_name	
+此 CREATE LOGIN 语 ALTER LOGIN 分之默认数据库也
+
+default_language_name	
+--此 CREATE LOGIN 语或 ALTER LOGIN 语之默认言也
+
+credential_id
+--此 CREATE LOGIN 语 ALTER LOGIN 分之据也
+
+is_policy_checked
+--0 或 1, CREATE LOGIN 语或 ALTER LOGIN 语
+
+is_expiration_checked
+--0 或 1, CREATE LOGIN 语或 ALTER LOGIN 语
+
+password_hash	
+--密码哈希直
+
+
+
+
+
+
+
+
+
+
+
+
+
