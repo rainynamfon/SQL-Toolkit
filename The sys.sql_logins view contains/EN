@@ -1,0 +1,105 @@
+name
+--This is the login_name that was assigned in CREATE LOGIN statement
+
+principal_id
+--Numeric value
+
+sid
+--This is the sid that was assigned in CREATE LOGIN statement
+
+type
+--Type of principal
+S = SQL Server user
+U = Windows user
+G = Windows group
+A = Application role
+R = Database role
+C = Certificate mapped
+K = Asymmetric key mapped
+
+
+totn SQL Server
+SQL Server: Find Logins in SQL Server
+Question:Is there a query to run in SQL Server that will return all SQL Server Logins and information about those Logins?
+
+Answer: In SQL Server, there is a catalog view (ie: system view) called sys.sql_logins. You can run a query against this system view that returns all of the Logins that have been created in SQL Server as well as information about these Logins.
+
+To retrieve all Logins in SQL Server, you can execute the following SQL statement:
+
+SELECT *
+FROM master.sys.sql_logins;
+The sys.sql_logins view contains the following columns:
+
+Column	Explanation
+name	This is the login_name that was assigned in CREATE LOGIN statement
+principal_id	Numeric value
+sid	This is the sid that was assigned in CREATE LOGIN statement
+type	Type of principal
+S = SQL Server user
+U = Windows user
+G = Windows group
+A = Application role
+R = Database role
+C = Certificate mapped
+K = Asymmetric key mapped
+
+type_desc
+--Description for type of principal
+SQL_USER
+WINDOWS_USER
+WINDOWS_GROUP
+APPLICATION_ROLE
+DATABASE_ROLE
+CERTIFICATE_MAPPED_USER
+ASSYMETRIC_KEY_MAPPED_USER
+
+is_disabled
+--0 or 1
+
+create_date
+--Date/time when Login was created using the CREATE LOGIN statement
+
+modify_date
+--Date/time when Login was last modified using the ALTER LOGIN statement
+
+default_database_name
+--This is the default database assigned in CREATE LOGIN statement or ALTER LOGIN statement
+
+default_language_name
+--This is the default language assigned in CREATE LOGIN statement or ALTER LOGIN statement
+
+credential_id
+--This is the credential assigned in CREATE LOGIN statement or ALTER LOGIN statement
+
+is_policy_checked
+--0 or 1, assigned by CREATE LOGIN statement or ALTER LOGIN statemen
+
+is_expiration_checked
+--0 or 1, assigned by CREATE LOGIN statement or ALTER LOGIN statement
+
+password_hash
+--Hashed value of the password
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
