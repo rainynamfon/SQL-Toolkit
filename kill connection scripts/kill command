@@ -1,0 +1,36 @@
+SELECT
+    spid,
+    sp.[status],
+    loginame [Login],
+    hostname, 
+    blocked BlkBy,
+    sd.name DBName, 
+    cmd Command,
+    cpu CPUTime,
+    memusage Memory,
+    physical_io DiskIO,
+    lastwaittype LastWaitType,
+    [program_name] ProgramName,
+    last_batch LastBatch,
+    login_time LoginTime,
+    'kill ' + CAST(spid as varchar(10)) as 'Kill Command'
+FROM master.dbo.sysprocesses sp 
+JOIN master.dbo.sysdatabases sd ON sp.dbid = sd.dbid
+WHERE sd.name NOT IN ('master', 'model', 'msdb') 
+--AND sd.name = 'db_name' 
+--AND hostname like 'hostname1%' 
+--AND loginame like 'username1%'
+ORDER BY spid
+
+/* If a service connects continously. You can automatically execute kill process then run your script:
+DECLARE @sqlcommand nvarchar (500)
+SELECT @sqlcommand = 'kill ' + CAST(spid as varchar(10))
+FROM master.dbo.sysprocesses sp 
+JOIN master.dbo.sysdatabases sd ON sp.dbid = sd.dbid
+WHERE sd.name NOT IN ('master', 'model', 'msdb') 
+--AND sd.name = 'db_name' 
+--AND hostname like 'hostname1%' 
+--AND loginame like 'username1%'
+--SELECT @sqlcommand
+EXEC sp_executesql @sqlcommand
+*/
