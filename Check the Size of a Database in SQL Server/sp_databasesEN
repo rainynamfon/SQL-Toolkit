@@ -1,0 +1,7 @@
+/*another option is the sp_databases system stored procedure.
+This stored procedure lists databases that either reside in an instance of the SQL Server or are accessible through a 
+database gateway.
+Here’s how to execute it:*/
+
+EXEC sp_databases;
+
