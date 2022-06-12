@@ -1,0 +1,3 @@
+sp_helpdbกระบวนงานที่เก็บไว้ของระบบอื่น 
+
+EXEC sp_helpdb N'Northwind';
