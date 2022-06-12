@@ -1,0 +1,9 @@
+/*กระบวนงานที่เก็บไว้ข้างต้นจะสอบถามมุมมอง sys.master_files ดังนั้นอีกทางเลือกหนึ่งคือตรงไปที่มุมมองและเลือกคอลัมน์ของคุณ:*/
+
+SELECT
+    name,
+    size,
+    size * 8/1024 'Size (MB)',
+    max_size
+FROM sys.master_files
+WHERE DB_NAME(database_id) = 'ใส่ชื่อ Database';
