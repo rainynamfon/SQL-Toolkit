@@ -1,0 +1,9 @@
+This article will review how to get information on your backup SQL database history, 
+including the metadata in MSDB that can be queried, as well as value-added tools and features to group, sort, report, and export this critical information
+
+
+It is essential for each organization to define the backup policy in its environment.
+Such policies help to recover the database with minimum loss of the data and minimum downtime. SQL Server maintains a backup history in the system database msdb.
+We might be taking different kinds of backups to the main minimum restoration time. In the case of any disaster,
+we must know exactly how to get the data from this internal table and prepare the restoration plan accordingly. 
+In this article, we will understand the way to retrieve the database backup history to meet these critical business requirements.
