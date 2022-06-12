@@ -1,0 +1,16 @@
+/*This table contains the row for each data or log file of the database for which we executed the backup SQL database. In the following image,
+we can see essential columns of this table:*/
+
+SELECT [filegroup_name]
+      ,[backed_up_page_count]
+      ,[file_type]
+      ,[file_size]
+      ,[logical_name]
+      ,[physical_name]
+  ,State
+      ,[state_desc]
+      ,[backup_size]
+  ,[differential_base_lsn]
+ FROM [msdb].[dbo].[backupfile] 
+ 
+ 
