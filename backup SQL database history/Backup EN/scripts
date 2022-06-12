@@ -38,3 +38,7 @@ differential_base_lsn: SQL Server takes a differential backup for the extents ha
 
 backupmediafamily
 In this table, we get the information about the logical and physical backup SQL database file name along with the device type in which backup was taken:
+
+It does become difficult to get the backup information each time based on the requirement. We need to write the code and get the data accordingly. 
+We might be having different kinds of environments having different database needs, and if we have a large database environment, it becomes difficult to get this data.
+We might report backup failures or backup reports to the management. In such a case, we need a central place from which we can get any backup information for any database in the instance.
