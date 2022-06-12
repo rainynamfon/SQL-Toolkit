@@ -1,0 +1,7 @@
+Another system stored procedure is sp_helpdb.
+
+EXEC sp_helpdb N'Northwind';
+
+
+
+
