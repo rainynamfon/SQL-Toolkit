@@ -7,3 +7,34 @@ Such policies help to recover the database with minimum loss of the data and min
 We might be taking different kinds of backups to the main minimum restoration time. In the case of any disaster,
 we must know exactly how to get the data from this internal table and prepare the restoration plan accordingly. 
 In this article, we will understand the way to retrieve the database backup history to meet these critical business requirements.
+
+filegroup_name: It shows the filegroup name of the data or log file. We do not have any filegroup for the log file therefore; this column can contain NULL value.
+
+backed_up_page_count: It shows the page count backed up.
+
+file_type: We can get the file type using this field. It can have following values.
+
+D: SQL Server data file
+L: SQL Server log file
+F: Full-text catalog
+S: Memory optimised file
+Logical_name: Logical name of the database file.
+
+Physical_name: backup physical location.
+
+State: It gives the state information of particular file. We can have following values for this.
+
+0 = ONLINE
+1 = RESTORING
+2 = RECOVERING
+3 = RECOVERY PENDING
+4 = SUSPECT
+6 = OFFLINE
+7 = DEFUNCT
+8 = DROPPED
+backup_size: It gives the backup SQL database size in bytes.
+
+differential_base_lsn: SQL Server takes a differential backup for the extents having LSN greater than differential_base_lsn.
+
+backupmediafamily
+In this table, we get the information about the logical and physical backup SQL database file name along with the device type in which backup was taken:
