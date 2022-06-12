@@ -1,0 +1,3 @@
+其一系统存储sp_helpdb 
+
+EXEC sp_helpdb N'Northwind';
