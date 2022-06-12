@@ -1,0 +1,9 @@
+询其存储 sys.master_files 视图。 故一法径转视图而选列之。
+
+SELECT
+    name,
+    size,
+    size * 8/1024 'Size (MB)',
+    max_size
+FROM sys.master_files
+WHERE DB_NAME(database_id) = '此文本数据库名';
