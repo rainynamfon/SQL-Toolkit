@@ -1,0 +1,9 @@
+/*The above stored procedure queries the sys.master_files view. So an alternative is to go straight to the view and cherry pick your columns*/
+
+SELECT
+    name,
+    size,
+    size * 8/1024 'Size (MB)',
+    max_size
+FROM sys.master_files
+WHERE DB_NAME(database_id) = 'text here database name';
