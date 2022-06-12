@@ -1,0 +1,13 @@
+/*This is a system stored procedure that displays the number of rows, disk space reserved, and disk space used by a table,
+indexed view, or Service Broker queue in the current database, or displays the disk space reserved and used by the whole database.
+
+To use it, simply switch to the relevant database and execute the procedure. Like this:*/
+
+USE DATEBASE_NAME;
+EXEC sp_spaceused;
+
+--For example 
+USE Northwind;
+EXEC sp_spaceused;
+
+
