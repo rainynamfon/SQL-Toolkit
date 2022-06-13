@@ -1,0 +1,9 @@
+SELECT      
+      S.NAME AS database_name,  
+      'Nobackups' AS [Backup Age (Hours)]  
+FROM 
+   master.dbo.sysdatabases S LEFT JOIN msdb.dbo.backupset B
+       ON S.name  = B.database_name 
+WHERE B.database_name IS NULL AND S.name <> 'tempdb'
+ORDER BY  
+   B.database_name
