@@ -1,0 +1,14 @@
+/*此表含我为备份 SQL 数据库数据库者,数日志文行。 在下图中,
+见此表之大略*/
+
+SELECT [filegroup_name]
+      ,[backed_up_page_count]
+      ,[file_type]
+      ,[file_size]
+      ,[logical_name]
+      ,[physical_name]
+  ,State
+      ,[state_desc]
+      ,[backup_size]
+  ,[differential_base_lsn]
+ FROM [msdb].[dbo].[backupfile]
