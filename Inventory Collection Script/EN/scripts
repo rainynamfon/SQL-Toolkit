@@ -1,0 +1,14 @@
+You want to learn all Inventory of SQL Server when you connect to SQL Server database for the first time.
+
+This SQL Server Database Inventory consist of following informations.
+
+Machine Name
+Instance Name
+Total Database Log Size
+Total Database Log Used
+Total Database Datafile size
+Logical CPU Count
+Physical CPU Count
+Physical Memory on Server
+Total Disk Size on Server
+Total Free Disk space on Server
