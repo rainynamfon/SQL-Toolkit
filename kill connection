@@ -21,3 +21,4 @@ EXEC(@spidstr)
 SELECT @ConnKilled = COUNT(1)
 FROM master..sysprocesses WHERE dbid=db_id(@DBName)
 END
+..
