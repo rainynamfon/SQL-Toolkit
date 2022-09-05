@@ -9,3 +9,4 @@ FROM   msdb.dbo.backupmediafamily
 WHERE  msdb..backupset.type = 'D' 
 GROUP BY 
    msdb.dbo.backupset.database_name
+...
